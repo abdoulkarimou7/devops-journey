@@ -1,4 +1,6 @@
 node_modules/
+testdir/
+*.tar.gz
 *.log
 .env
 .DS_Store
