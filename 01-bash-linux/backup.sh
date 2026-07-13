@@ -13,4 +13,4 @@ tar -czf "backup_zip_file_${date}_archive.tar.gz" "$1"
 else
     echo "Backup failed."
     exit 1
-fi
+fi 
