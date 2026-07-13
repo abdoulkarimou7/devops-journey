@@ -23,7 +23,7 @@ chmod +x script.sh
 
 
 ## Progress
-<!-- learning in progress --> | <!-- day 2 in progress -->
+<!-- learning in progress -->
 - [x] Day 1 — Git setup & project structure
 - [ ] Day 15 — Phase 1 complete (Bash/Git/README)
 - [ ] Day 30 — React portfolio live
