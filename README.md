@@ -23,7 +23,6 @@ chmod +x script.sh
 
 
 ## Progress
-<!-- learning in progress -->
 - [x] Day 1 — Git setup & project structure
 - [x] Day 2 — Git problem resolution & README.md structure
 - [x] Day 3 — grep/find/sed, cron automation, git stash & aliases
