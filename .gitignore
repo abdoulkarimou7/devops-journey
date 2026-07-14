@@ -10,3 +10,4 @@ cred.txt
 *.pem
 *token*
 01-bash-linux/test.log
+01-bash-linux/cron-output.log
