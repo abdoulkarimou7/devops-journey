@@ -9,3 +9,4 @@ __pycache__/
 cred.txt
 *.pem
 *token*
+01-bash-linux/test.log
