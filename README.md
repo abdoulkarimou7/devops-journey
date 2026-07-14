@@ -26,6 +26,7 @@ chmod +x script.sh
 <!-- learning in progress -->
 - [x] Day 1 — Git setup & project structure
 - [x] Day 2 — Git problem resolution & README.md structure
+- [x] Day 3 — grep/find/sed, cron automation, git stash & aliases
 - [ ] Day 15 — Phase 1 complete (Bash/Git/README)
 - [ ] Day 30 — React portfolio live
 - [ ] Day 45 — First DevOps project + CI/CD
