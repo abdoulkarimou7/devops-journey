@@ -7,7 +7,17 @@ if [ "$#" -ne 1 ]; then
 fi
 
 hostname=$1
-ping -c 2 "$hostname"
+if ping -c 2 "$hostname" 2>/dev/null; then
+    echo "Ping successful"
+else
+    echo "Ping failed or blocked (this doesn't always mean the host is down)"
+fi
 
-statusCode=$(curl -I ${hostname} 2>/dev/null | head -n 1 | awk '{print $2}')
-echo "Status Code: $statusCode"
+echo ""
+echo "=== HTTP status ==="
+statusCode=$(curl -IL "https://$hostname" 2>/dev/null | grep "HTTP" | tail -1 | awk '{print $2}')
+if [ -z "$statusCode" ]; then
+    echo "Could not reach $hostname via HTTP"
+else
+    echo "Status Code: $statusCode"
+fi
