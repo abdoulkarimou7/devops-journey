@@ -1,17 +1,23 @@
 # Portfolio Content Draft
 
 ## Hero Pitch
-Building practical DevOps projects in CI/CD, IaC, observability, and cloud infrastructure.
+Aspiring DevOps Engineer
 
-## Skills
-### Scripting & OS
-- Bash, Linux
+Computer Science Engineering student building strong foundations in Linux, Bash, Git and automation through hands-on projects and daily practice. Currently expanding my skills in Docker, CI/CD, cloud technologies and Infrastructure as Code, with the long-term goal of becoming a DevSecOps Engineer. Seeking a DevOps internship where I can learn, contribute and grow.
 
-### Version Control
-- Git (branching, merge workflows)
+## Skills (Detailed)
 
-### Coming soon
-- Docker, CI/CD, Terraform, Kubernetes
+### Strong Foundation
+- Linux fundamentals (permissions, processes, cron)
+- Bash scripting (automation, arguments, error handling, pipelines)
+- Git (branching, merge conflict resolution, collaborative workflows)
+
+### Learning Next
+- Docker & containerization
+- CI/CD with GitHub Actions
+- Terraform (Infrastructure as Code)
+- Kubernetes
+- Monitoring & Observability (Prometheus, Grafana)
 
 ## Projects (planned)
 
