@@ -15,7 +15,7 @@ fi
 
 echo ""
 echo "=== HTTP status ==="
-statusCode=$(curl -IL "https://$hostname" 2>/dev/null | grep "HTTP" | tail -1 | awk '{print $2}')
+statusCode=$(curl -IL "https://$hostname" 2>/dev/null | grep "HTTP" | tail -1 | awk '{print $2}') || true
 if [ -z "$statusCode" ]; then
     echo "Could not reach $hostname via HTTP"
 else
