@@ -11,6 +11,8 @@ Computer Science Engineering student building strong foundations in Linux, Bash,
 - Linux fundamentals (permissions, processes, cron)
 - Bash scripting (automation, arguments, error handling, pipelines)
 - Git (branching, merge conflict resolution, collaborative workflows)
+- SSH & key-based auth
+- Networking fundamentals (ping, DNS, HTTP status codes, curl)
 
 ### Learning Next
 - Docker & containerization
