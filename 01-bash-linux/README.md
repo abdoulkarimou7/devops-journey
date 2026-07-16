@@ -58,7 +58,7 @@ This script show variable of environnements : User, path, shell,home and current
 \`\`\`
 
 ### `log-analyzer.sh`
-this script show some detaille about your log (<log_file>) : number of lines, number of lines with error and 3 latest error lines.
+This script displays details about your log file : number of lines, number of lines with error and 3 latest error lines.
 
 
 **Usage:**
@@ -69,7 +69,7 @@ this script show some detaille about your log (<log_file>) : number of lines, nu
 **Example:**
 \`\`\`bash
 ./log-analyzer.sh test.log
-\`\`\
+\`\`\`
 
 ### `network-check.sh`
 Tests connectivity via ping and displays the HTTP status code of the host.
@@ -83,10 +83,10 @@ Tests connectivity via ping and displays the HTTP status code of the host.
 **Example:**
 \`\`\`bash
 ./network-check.sh google.com
-\`\`\
+\`\`\`
 
 ### `process-info.sh`
-this script show the number of process and top 5 memory-consuming processes.
+This script displays the total number of processes and the top 5 memory-consuming ones
 
 
 **Usage:**
@@ -97,10 +97,10 @@ this script show the number of process and top 5 memory-consuming processes.
 **Example:**
 \`\`\`bash
 ./process-info.sh
-\`\`\
+\`\`\`
 
 ### `bump-version.sh`
-Update version in the configue file with sed.
+Update version in the config file with sed.
 
 
 **Usage:**
@@ -111,4 +111,4 @@ Update version in the configue file with sed.
 **Example:**
 \`\`\`bash
 ./bump-version.sh config.env 1.0.1
-\`\`\
+\`\`\`
