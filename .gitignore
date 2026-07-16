@@ -1,5 +1,5 @@
 node_modules/
-testdir/
+01-bash-linux/testdir/
 *.tar.gz
 *.log
 .env
@@ -11,3 +11,4 @@ cred.txt
 *token*
 01-bash-linux/test.log
 01-bash-linux/cron-output.log
+01-bash-linux/config.env
