@@ -6,6 +6,16 @@ if [ $# -eq 0 ]; then
     echo "No arguments provided. Please provide a limite of disk space in percentage."
     exit 1
 fi
+if ! [[ "$1" =~ ^[0-9]+$ ]]; then
+    echo "Invalid argument. Please provide a valid integer for the disk space limit."
+    exit 1
+fi
+
+if [ "$1" -lt 0 ] || [ "$1" -gt 100 ]; then
+    echo "Invalid argument. Please provide a disk space limit between 0 and 100."
+    exit 1
+fi
+SEUIL="$1"
 
 echo "=== Disk Space Check ==="
 echo "Date: $(date)"
@@ -13,7 +23,7 @@ echo ""
 echo "=== Disk usage ==="
 
 # Getting the / disk usage percentage for the provided path and removing the '%' sign
-SEUIL=$1
+
 USAGE=$(df / | tail -1 | awk '{print $5}' | tr -d '%')
 echo "Usage disque actuel : ${USAGE}%"
 echo "Disk usage for $1: ${SEUIL}%" 
