@@ -1,5 +1,6 @@
 node_modules/
 01-bash-linux/testdir/
+01-bash-linux/health-check.log
 *.tar.gz
 *.log
 .env
