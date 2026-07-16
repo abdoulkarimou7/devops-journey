@@ -112,3 +112,16 @@ Update version in the config file with sed.
 \`\`\`bash
 ./bump-version.sh config.env 1.0.1
 \`\`\`
+
+### `health-check.sh`
+Runs a combined system health check: disk usage and available memory, both checked against defined thresholds. Logs every result (OK or ALERT) with a timestamp, to both the terminal and a log file, and prints a summary with the total number of alerts.
+
+**Usage:**
+\`\`\`bash
+./health-check.sh [threshold_percentage]
+\`\`\`
+
+**Example:**
+\`\`\`bash
+./health-check.sh 80
+\`\`\`

@@ -27,6 +27,7 @@ chmod +x script.sh
 - [x] Day 2 — Git problem resolution & README.md structure
 - [x] Day 3 — grep/find/sed, cron automation, git stash & aliases
 - [x] Day 4 — SSH & key-based auth, networking basics (ping/dig/curl), robust error handling, portfolio content refined for accuracy
+- [x] Day 5 — Environment variables & PATH, repo audit/cleanup, advanced Bash (functions, logging, health-check script)
 - [ ] Day 15 — Phase 1 complete (Bash/Git/README)
 - [ ] Day 30 — React portfolio live
 - [ ] Day 45 — First DevOps project + CI/CD
