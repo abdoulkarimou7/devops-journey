@@ -24,5 +24,3 @@ echo ""
 echo "3 latest error lines:"
 list_of_lines_with_error=$(grep "ERROR" "$log_file" | tail -3)
 echo "$list_of_lines_with_error"
-
-
