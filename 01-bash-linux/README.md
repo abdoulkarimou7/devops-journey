@@ -125,3 +125,22 @@ Runs a combined system health check: disk usage and available memory, both check
 \`\`\`bash
 ./health-check.sh 80
 \`\`\`
+
+### `server-toolkit.sh`
+An all-in-one server monitoring toolkit. Checks disk usage and available memory against configurable thresholds, logs every result (OK or ALERT) with a timestamp, and prints a summary with total alerts, process count, and system uptime. Exits with code 1 if any alert was triggered, 0 otherwise.
+
+**Usage:**
+\`\`\`bash
+./server-toolkit.sh [-d threshold] [-m memory_mb] [-l log_file] [-h]
+\`\`\`
+
+**Options:**
+- `-d` : disk usage alert threshold in % (default: 80)
+- `-m` : minimum free memory in MB before alert (default: 500)
+- `-l` : log file path (default: server-toolkit.log)
+- `-h` : show help message
+
+**Example:**
+\`\`\`bash
+./server-toolkit.sh -d 70 -m 1000 -l monitoring.log
+\`\`\`
