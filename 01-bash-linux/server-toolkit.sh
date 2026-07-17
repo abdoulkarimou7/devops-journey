@@ -71,7 +71,7 @@ echo "Number of Ok in the log: $(grep -c 'Ok:' "$log_file")"
 echo "Number of processes: $(ps aux | wc -l)"
 echo "The server is $(uptime -p) and running."
 
-if [[ Number_of_alerte -gt 0 ]]; then
+if [[ "$Number_of_alerte" -gt 0 ]]; then
     echo "There are alerts in the log file. Please check $log_file for details."
     exit 1
 else
