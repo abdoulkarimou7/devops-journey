@@ -52,3 +52,13 @@ if [ "$USAGE" -gt "$SEUIL" ]; then
 else
     log "Ok: Disk usage is below the threshold of ${SEUIL}%. All good."
 fi
+
+echo "=== Memory usage ==="
+Memory_free=$(free -m | awk 'NR==2 {print $4}')
+echo "Memory free: ${Memory_free}MB"
+if [ "$Memory_free" -lt "$memory" ]; then
+    log "Alerte: Memory usage is above the threshold of ${memory}MB. Please take action."
+    Number_of_alerte=$((Number_of_alerte + 1))
+else
+    log "Ok: Memory usage is below the threshold of ${memory}MB. All good."
+fi  
