@@ -21,3 +21,13 @@ function help() {
     echo "  -l log_file  : Set the log file name (default: server-toolkit.log)"
     echo "  -h           : Display this help message"
 }
+
+while getopts "d:m:l:h" option; do
+	case $option in 
+	d) if [[ $OPTARG =~ ^[0-9]+$ ]]; then SEUIL="$OPTARG"; else echo "Invalid threshold value"; help; exit 1; fi;;
+	m) if [[ $OPTARG =~ ^[0-9]+$ ]]; then memory="$OPTARG"; else echo "Invalid memory value"; help; exit 1; fi;;
+	l) if [[ $OPTARG =~ ^[0-9]+$ ]]; then echo "Invalid log file name"; help; exit 1; else log_file="$OPTARG"; fi;;
+	h) help
+	exit 0;;
+	esac
+done
