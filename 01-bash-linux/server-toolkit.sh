@@ -31,3 +31,24 @@ while getopts "d:m:l:h" option; do
 	exit 0;;
 	esac
 done
+
+echo "=== Server Toolkit ==="
+echo "Powering up..."
+
+echo "=== Host information ==="
+echo "User : " $USER
+echo "Home : " $HOME
+echo ""
+
+echo "=== Disk usage ==="
+
+USAGE=$(df / | tail -1 | awk '{print $5}' | tr -d '%')
+echo "Usage disque actuel : ${USAGE}%"
+echo "Seuil : ${SEUIL}%" 
+
+if [ "$USAGE" -gt "$SEUIL" ]; then
+    log "Alerte: Disk usage is above the threshold of ${SEUIL}%. Please take action."
+    Number_of_alerte=$((Number_of_alerte + 1))
+else
+    log "Ok: Disk usage is below the threshold of ${SEUIL}%. All good."
+fi
