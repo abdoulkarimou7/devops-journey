@@ -62,3 +62,19 @@ if [ "$Memory_free" -lt "$memory" ]; then
 else
     log "Ok: Memory usage is below the threshold of ${memory}MB. All good."
 fi  
+
+echo "=== Statistics ==="
+echo "Disk usage/threshold: ${USAGE}% / ${SEUIL}%"
+echo "Memory free/threshold: ${Memory_free}MB / ${memory}MB"
+echo "Number of alerts triggered: $Number_of_alerte"
+echo "Number of Ok in the log: $(grep -c 'Ok:' "$log_file")"
+echo "Number of processes: $(ps aux | wc -l)"
+echo "The server is $(uptime -p) and running."
+
+if [[ Number_of_alerte -gt 0 ]]; then
+    echo "There are alerts in the log file. Please check $log_file for details."
+    exit 1
+else
+    echo "No alerts triggered. All systems are normal."
+    exit 0
+fi
