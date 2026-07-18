@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <h2>Contact</h2>
       <p>Feel free to reach out — I'm open to internships, collaborations, and conversations about DevOps.</p>
       <ul>
