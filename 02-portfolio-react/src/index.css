@@ -227,3 +227,9 @@ section:last-child {
 html {
   scroll-behavior: smooth;
 }
+
+.languages {
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--text);
+}

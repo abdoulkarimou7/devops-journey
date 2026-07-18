@@ -22,6 +22,9 @@ function About() {
       <p>
         I'm currently preparing for my third year of Computer Science Engineering while continuously building a portfolio that reflects what I can actually build—not just what I can list on a résumé.
       </p>
+      <p className="languages">
+        <strong>Languages:</strong> French (fluent), English (intermediate)
+      </p>
     </section>
   );
 }
