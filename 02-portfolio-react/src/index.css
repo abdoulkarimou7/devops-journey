@@ -109,3 +109,121 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+section {
+  padding: 48px 24px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.hero p {
+  max-width: 640px;
+  margin: 16px auto 0;
+  color: var(--text);
+}
+
+.about p {
+  margin-bottom: 16px;
+  line-height: 160%;
+}
+
+.about a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+.skills > div {
+  margin-bottom: 24px;
+}
+
+.skills h3 {
+  color: var(--text-h);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills li {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--text-h);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.projects > div {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.projects h3 {
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.navbar a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+html {
+  scroll-behavior: smooth;
+}
