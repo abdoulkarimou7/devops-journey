@@ -1,0 +1,21 @@
+name: Portfolio CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '02-portfolio-react/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 02-portfolio-react
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run build
