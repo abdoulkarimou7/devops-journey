@@ -38,3 +38,9 @@ chmod +x script.sh
 - [ ] Day 60 — Terraform project
 - [ ] Day 75 — Kubernetes + monitoring
 - [ ] Day 90 — Final deployment + complete portfolio
+
+### Link : 
+- Portfolio: https://abdoulkarimou7.github.io/devops-journey/
+- Linkedin: https://www.linkedin.com/in/mahamadou-aboubacar-abdoulkarimou-272a14324/
+- X: https://x.com/RIMKUS8558
+- Instagram: https://www.instagram.com/y4rim4/
