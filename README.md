@@ -31,6 +31,7 @@ chmod +x script.sh
 - [x] Day 6 — React portfolio initialized (Vite), 5 sections built (Hero, About, Skills, Projects, Contact)
 - [x] Day 7 — Portfolio styling, sticky navbar, languages section
 - [x] Day 8 — Docker (multi-stage build for portfolio), first GitHub Actions CI workflow
+- [x] Day 9 — GitHub Pages deployment, full CI/CD cycle for portfolio, base path debugging
 - [ ] Day 15 — Phase 1 complete (Bash/Git/README)
 - [ ] Day 30 — React portfolio live
 - [ ] Day 45 — First DevOps project + CI/CD
