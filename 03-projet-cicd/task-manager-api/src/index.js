@@ -1,34 +1,37 @@
 const express = require('express');
+const pool = require('./db');
 const app = express();
 
-app.use(express.json()); // permet de lire du JSON envoyé dans les requêtes
-
-let tasks = []; // stockage temporaire en mémoire
-let nextId = 1;
+app.use(express.json());
 
 // Lister toutes les tâches
-app.get('/tasks', (req, res) => {
-  res.json(tasks);
+app.get('/tasks', async (req, res) => {
+  const result = await pool.query('SELECT * FROM tasks ORDER BY id');
+  res.json(result.rows);
 });
 
 // Créer une tâche
-app.post('/tasks', (req, res) => {
-  const task = { id: nextId++, title: req.body.title, done: false };
-  tasks.push(task);
-  res.status(201).json(task);
+app.post('/tasks', async (req, res) => {
+  const result = await pool.query(
+    'INSERT INTO tasks (title) VALUES ($1) RETURNING *',
+    [req.body.title]
+  );
+  res.status(201).json(result.rows[0]);
 });
 
 // Marquer une tâche comme terminée
-app.put('/tasks/:id', (req, res) => {
-  const task = tasks.find(t => t.id === parseInt(req.params.id));
-  if (!task) return res.status(404).json({ error: 'Task not found' });
-  task.done = true;
-  res.json(task);
+app.put('/tasks/:id', async (req, res) => {
+  const result = await pool.query(
+    'UPDATE tasks SET done = TRUE WHERE id = $1 RETURNING *',
+    [req.params.id]
+  );
+  if (result.rows.length === 0) return res.status(404).json({ error: 'Task not found' });
+  res.json(result.rows[0]);
 });
 
 // Supprimer une tâche
-app.delete('/tasks/:id', (req, res) => {
-  tasks = tasks.filter(t => t.id !== parseInt(req.params.id));
+app.delete('/tasks/:id', async (req, res) => {
+  await pool.query('DELETE FROM tasks WHERE id = $1', [req.params.id]);
   res.status(204).send();
 });
 
