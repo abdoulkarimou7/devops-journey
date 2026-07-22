@@ -4,6 +4,7 @@ node_modules/
 *.tar.gz
 *.log
 .env
+.env.test
 .DS_Store
 __pycache__/
 *.pyc
