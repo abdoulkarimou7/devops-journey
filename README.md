@@ -33,6 +33,7 @@ chmod +x script.sh
 - [x] Day 8 — Docker (multi-stage build for portfolio), first GitHub Actions CI workflow
 - [x] Day 9 — GitHub Pages deployment, full CI/CD cycle for portfolio, base path debugging
 - [x] Day 10 — Task manager API (Express + PostgreSQL), Docker Compose orchestration, persistence verified
+- [x] Day 11 — CI pipeline for task-manager-api (tests with Jest/Supertest, PostgreSQL service, Docker build)
 - [ ] Day 15 — Phase 1 complete (Bash/Git/README)
 - [ ] Day 30 — React portfolio live
 - [ ] Day 45 — First DevOps project + CI/CD
