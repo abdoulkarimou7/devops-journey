@@ -5,6 +5,43 @@ Objectif : documenter la méthode de diagnostic, pas seulement la solution final
 
 ---
 
+
+# Incident: GitHub Action resolution failure — `deploy-pages@v4`
+
+**Date:** 2026-07-23
+**Project:** Portfolio deployment (`.github/workflows/portfolio-deploy.yml`)
+
+## Symptom
+
+The "Deploy Portfolio" workflow failed with:
+
+
+## Investigation
+
+- Verified the YAML syntax and action reference — no typo, correct spelling.
+- Checked official documentation for `actions/upload-pages-artifact`: `@v3` is the current recommended tag, and requires `actions/deploy-pages@v4` or newer.
+- Ruled out a real deprecation issue (the action was working fine in previous runs).
+
+## Attempted fixes
+
+1. Downgraded `actions/deploy-pages` from `@v4` to `@v1` (suggested by GitHub Copilot) — worked once, but contradicted official docs (v3 artifact requires v4+ deploy-pages), so kept as suspicious.
+2. Tried `actions/deploy-pages@v3` — pipeline failed.
+3. Reverted to the original `actions/deploy-pages@v4` and re-pushed — **pipeline succeeded**, site deployed correctly.
+
+## Root cause
+
+Most likely a **transient GitHub Actions infrastructure issue** (temporary problem resolving the `v4` tag or a related dependency at that specific moment), not a real configuration or code issue. The original, officially recommended configuration (`deploy-pages@v4`) worked correctly once retried.
+
+## Resolution
+
+No code change was ultimately needed. The fix was simply **retrying** (re-running the workflow / pushing again) rather than changing the action version.
+
+## Lesson learned
+
+When a GitHub Action that was previously working suddenly fails with a "repository or version not found" error, the first step should be to **retry** (re-run the job, or trigger a new push) before changing action versions. Downgrading versions based on trial and error can introduce inconsistencies with official documentation and may only appear to "work" due to unrelated factors.
+
+---
+
 ## 2026-07-23 — Steam refuse de s'installer sur Ubuntu 25.10
 
 ### Symptôme
@@ -55,3 +92,5 @@ flatpak run com.valvesoftware.Steam
   risqué pour la stabilité du système.
 - Flatpak est une bonne solution de contournement quand un conflit de
   dépendances système est complexe à résoudre proprement.
+
+
