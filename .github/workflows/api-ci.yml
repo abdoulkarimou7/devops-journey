@@ -45,4 +45,31 @@ jobs:
           DB_USER: postgres
           DB_PASSWORD: postgres
           DB_NAME: tasks_db
-      - run: docker build -t task-manager-api .
+
+  build-and-push:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    defaults:
+      run:
+        working-directory: 03-projet-cicd/task-manager-api
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v5
+        with:
+          context: 03-projet-cicd/task-manager-api
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/task-manager-api:latest
+            ghcr.io/${{ github.repository_owner }}/task-manager-api:${{ github.sha }}
