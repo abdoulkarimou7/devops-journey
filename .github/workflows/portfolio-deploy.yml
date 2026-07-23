@@ -35,4 +35,4 @@ jobs:
         with:
           path: 02-portfolio-react/dist
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v3
