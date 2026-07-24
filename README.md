@@ -35,6 +35,7 @@ chmod +x script.sh
 - [x] Day 10 — Task manager API (Express + PostgreSQL), Docker Compose orchestration, persistence verified
 - [x] Day 11 — CI pipeline for task-manager-api (tests with Jest/Supertest, PostgreSQL service, Docker build)
 - [x] Day 12 — Full CD for task-manager-api (image pushed to ghcr.io), Trivy security scan, debugged duplicated Docker step across jobs
+- [x] Day 13 — Wrote api-ci.yml and a new docker-compose.yml (MySQL) from scratch, YAML anchors understanding
 - [ ] Day 15 — Phase 1 complete (Bash/Git/README)
 - [ ] Day 30 — React portfolio live
 - [ ] Day 45 — First DevOps project + CI/CD
