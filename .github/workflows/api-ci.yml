@@ -52,9 +52,6 @@ jobs:
     permissions:
       contents: read
       packages: write
-    defaults:
-      run:
-        working-directory: 03-projet-cicd/task-manager-api
     steps:
       - uses: actions/checkout@v4
 
